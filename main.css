@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    transition: transform .5s linear;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+}
+
+.front {
+    background-color: #333;
+    line-height: 200px;
+}
+
+.front::before {
+    content: '?';
+    font-size: 140px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.back {
+    transform: rotateY(180deg);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+img {
+    width: 140px;
+    height: 140px;
+}
+
+.res {
+    width: fit-content;
+    height: 100px;
+    background-color: white;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.res p {
+    font-size: 35px;
+}
+
+.res button {
+    text-align: left;
+    border: none;
+    font-size: 40px;
+    width: fit-content;
+    border-radius: 6px;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: white;
+}
+
+.info {
+    background-color: #eee;
+    font-size: 34px;
+    margin: 20px auto;
+    padding: 15px 10px;
+    border: 2px blue solid;
+    display: flex;
+    border-radius: 4px;
+    justify-content: space-between;
+    width: 1080px;
+}
+
+.container.no {
+    pointer-events: none;
+}
+
+.box.the {
+    transform: rotateY(180deg);
+}
+
+.box.noc {
+    pointer-events: none;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    border: 5px solid #2196f3
+}
+
+.container {
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0 auto;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box.flip {
+    transform: rotateY(180deg)
+}
+
+.control {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgb(3, 196, 244, .9);
+}
+
+.control span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    background-color: #f4433f;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 6px;
+    width: fit-content;
+    padding: 20px 10px;
+    /* height: 30px; */
+}
