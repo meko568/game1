@@ -1,5 +1,6 @@
+let yourName = ""
 document.querySelector(".control span").onclick = function () {
-    let yourName = prompt("what is your name");
+    yourName = prompt("what is your name");
     if (yourName === null || yourName === "") {
         yourName = "unknown"
     }
@@ -25,6 +26,7 @@ for (let i = 0; i < order.length; i++) {
 
 arr.forEach(function (e, index) {
     shuffel(order);
+    console.log(yourName)
     e.style.order = order[index]
     e.onclick = function () {
         e.classList.add("flip");
@@ -47,7 +49,6 @@ arr.forEach(function (e, index) {
                         }
                     })
                 }
-                console.log(all)
                 flipped[0].classList.add("noc");
                 flipped[1].classList.add("noc");
                 document.getElementById("success").play()
