@@ -10,7 +10,7 @@ document.querySelector(".control span").onclick = function () {
         e.classList.add("flip");
         setTimeout(() => {
             e.classList.remove("flip")
-        }, duration);
+        }, duration * 1.5);
     });
 }
 
