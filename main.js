@@ -10,7 +10,7 @@ document.querySelector(".control span").onclick = function () {
         e.classList.add("flip");
         setTimeout(() => {
             e.classList.remove("flip")
-        }, duration * 1.5);
+        }, duration * 15);
     });
 }
 
@@ -39,7 +39,7 @@ arr.forEach(function (e, index) {
                 flipped[0].classList.add("the");
                 flipped[1].classList.add("the");
                 let all = arr.filter((e) => e.classList.contains("the"));
-                if (all.length === 20) {
+                if (all.length === 30) {
                     document.querySelector(".res button").style.backgroundColor = "black"
                     setTimeout(function () {
                         document.querySelector(".res p").innerHTML = "you finish the game";
