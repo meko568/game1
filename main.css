@@ -41,13 +41,18 @@ img {
 }
 
 .res {
+    position: absolute;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
     width: fit-content;
-    height: 100px;
-    background-color: white;
-    position: relative;
+    background-color: #2196f2;
     left: 50%;
-    transform: translate(-50%);
     text-align: center;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    z-index: 5;
+    display: none;
 }
 
 .res p {

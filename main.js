@@ -40,9 +40,10 @@ arr.forEach(function (e, index) {
                 flipped[1].classList.add("the");
                 let all = arr.filter((e) => e.classList.contains("the"));
                 if (all.length === 30) {
-                    document.querySelector(".res button").style.backgroundColor = "black"
+                    document.querySelector(".res button").style.backgroundColor = "black";
+                    document.querySelector(".res").style.display = "block"
                     setTimeout(function () {
-                        document.querySelector(".res p").innerHTML = "you finish the game";
+                        document.querySelector(".res p").innerHTML = `you finish the game in ${document.querySelector(".tires span").innerHTML} tries`;
                         document.querySelector(".res button").innerHTML = "restart the game";
                         document.querySelector(".res button").onclick = function () {
                             location.reload()
