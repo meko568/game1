@@ -143,3 +143,14 @@ img {
     padding: 20px 10px;
     /* height: 30px; */
 }
+
+.best-score {
+    margin: auto;
+    width: fit-content;
+    padding: 10px;
+    font-size: 40px;
+    background-color: #2196f2;
+    color: white;
+    border-radius: 6px;
+
+}

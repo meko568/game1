@@ -40,6 +40,13 @@ arr.forEach(function (e, index) {
                 flipped[1].classList.add("the");
                 let all = arr.filter((e) => e.classList.contains("the"));
                 if (all.length === 30) {
+                    if (localStorage.score) {
+                        if (+localStorage.score > +document.querySelector(".tires span").innerHTML) {
+                            localStorage.score = document.querySelector(".tires span").innerHTML
+                        }
+                    } else {
+                        localStorage.score = document.querySelector(".tires span").innerHTML;
+                    }
                     document.querySelector(".res button").style.backgroundColor = "black";
                     document.querySelector(".res").style.display = "block"
                     setTimeout(function () {
@@ -83,4 +90,11 @@ function shuffel(arr) {
         arr[current] = arr[random];
         arr[random] = temp;
     }
+}
+
+
+if (localStorage.score) {
+    document.querySelector(".best-score span").innerHTML = localStorage.score
+} else {
+    document.querySelector(".best-score span").innerHTML = "play first"
 }
